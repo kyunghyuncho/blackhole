@@ -1,0 +1,16 @@
+The data is in grs1915_all_125ms.dat
+This is a pickle file with a long list of >2000 elements. Each element in turn is a list with two elements:
+1) The time series in 4 different photon energy ranges in a numpy.ndarray
+2) a label, either a string (if a human classification is available for that data set) or None
+
+The numpy.ndarray with the time series is of form (length of time series, 5); the five columns are:
+1) A time stamp in Mission Elapsed Seconds (essentially seconds since Jan 1 1992); the time resolution is 125ms (that is, the time stamps are 125ms apart
+2) The number of photons that arrived at the detector within the 125ms interval at all photon energies observable by the telescope (X-ray astronomers work in energy rather than wavelength of the light, but it's essentially the same thing)
+3) The number of photons that arrived at the detector within the 125ms interval in the low-energy band
+4) The number of photons that arrived at the detector within the 125ms interval in the mid-energy band
+5) The number of photons that arrived at the detector within the 125ms interval in the high-energy band
+
+Columns 3-5 should roughly sum up to the value in column 2, though it might not be an exact correspondence.
+
+
+
